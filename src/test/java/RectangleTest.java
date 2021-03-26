@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
 public class RectangleTest {
 
     @Test
-    void shouldConstructIfSidesPositive() {
+    public void shouldConstructIfSidesPositive() {
         try {
             new Rectangle(5, 6);
         } catch (Exception e) {
@@ -17,7 +17,7 @@ public class RectangleTest {
     }
 
     @Test
-    void shouldNotConstructIfSidesNotPositive() {
+    public void shouldNotConstructIfSidesNotPositive() {
         List<Integer> side1 = Arrays.asList(0, -1, 1, 1);
         List<Integer> side2 = Arrays.asList(2, 2, -1, 0);
         for (int i = 0; i < 4; i++) {
@@ -30,14 +30,14 @@ public class RectangleTest {
     }
 
     @Test
-    void shouldComputeAreaCorrect() {
+    public void shouldComputeAreaCorrect() {
         List<Integer> side1 = Arrays.asList(1, 5, 12, 10);
         List<Integer> side2 = Arrays.asList(2, 8, 11, 10);
         List<Integer> area = Arrays.asList(2, 40, 132, 100);
         for (int i = 0; i < 4; i++) {
             try {
                 Rectangle rect = new Rectangle(side1.get(i), side2.get(i));
-                assertEquals(rect.calculateArea(), area.get(i));
+                assertEquals(rect.computeArea(),(long)  area.get(i));
             } catch (Exception e) {
                 fail(e.getMessage());
             }
