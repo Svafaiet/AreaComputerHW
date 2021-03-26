@@ -61,7 +61,7 @@ public class RectangleTest {
         try {
             Rectangle rect = new Rectangle(4, 7);
             rect.setWidth(1);
-            rect.setHeight(4);
+            rect.setHeight(3);
             assertEquals(rect.getWidth(), 1);
             assertEquals(rect.getHeight(), 3);
         } catch (Exception e) {
