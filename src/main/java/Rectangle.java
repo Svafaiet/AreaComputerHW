@@ -1,4 +1,4 @@
-public class Rectangle {
+public class Rectangle implements Shape {
     private int width;
     private int height;
 
@@ -15,6 +15,9 @@ public class Rectangle {
     }
 
     public void setWidth(int width) {
+        if (width <= 0) {
+            throw new IllegalArgumentException("Sides must be positive");
+        }
         this.width = width;
     }
 
@@ -23,6 +26,9 @@ public class Rectangle {
     }
 
     public void setHeight(int height) {
+        if (height <= 0) {
+            throw new IllegalArgumentException("Sides must be positive");
+        }
         this.height = height;
     }
 
