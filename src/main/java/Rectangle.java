@@ -1,17 +1,17 @@
 public class Rectangle {
     private int width;
-    private int length;
+    private int height;
 
-    Rectangle(int width, int length){
-        if (length < 0 || width < 0) {
+    Rectangle(int width, int height){
+        if (height < 0 || width < 0) {
             throw new IllegalArgumentException("Sides must be positive");
         }
         this.width = width;
-        this.length = length;
+        this.height = height;
     }
 
     public long computeArea() {
-        return width * length;
+        return (long) width * height;
     }
 
 }
