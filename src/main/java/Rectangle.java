@@ -6,8 +6,8 @@ public class Rectangle {
         if (height < 0 || width < 0) {
             throw new IllegalArgumentException("Sides must be positive");
         }
-        this.width = width;
-        this.height = height;
+        this.setWidth(width);
+        this.setHeight(height);
     }
 
     public int getWidth() {
@@ -27,7 +27,7 @@ public class Rectangle {
     }
 
     public long computeArea() {
-        return (long) width * height;
+        return (long) this.getWidth() * this.getHeight();
     }
 
 }
