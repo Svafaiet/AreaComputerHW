@@ -3,7 +3,7 @@ public class Rectangle {
     private int height;
 
     Rectangle(int width, int height) {
-        if (height < 0 || width < 0) {
+        if (height <= 0 || width <= 0) {
             throw new IllegalArgumentException("Sides must be positive");
         }
         this.setWidth(width);

@@ -57,6 +57,21 @@ public class RectangleTest {
     }
 
     @Test
+    public void shouldSetNegativeFail() {
+        Rectangle rect = new Rectangle(1, 3);
+        try {
+            rect.setWidth(-1);
+        } catch (Exception e) {
+            assertEquals(e.getMessage(), "Sides must be positive");
+        }
+        try {
+            rect.setHeight(-1);
+        } catch (Exception e) {
+            assertEquals(e.getMessage(), "Sides must be positive");
+        }
+    }
+
+    @Test
     public void shouldChangeGetOnSet() {
         try {
             Rectangle rect = new Rectangle(4, 7);
