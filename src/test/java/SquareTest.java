@@ -19,7 +19,7 @@ public class SquareTest {
     @Test
     public void shouldNotConstructIfSidesNotPositive() {
         List<Integer> sides = Arrays.asList(0, -1, -2);
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 3; i++) {
             try {
                 new Square(sides.get(i));
             } catch (Exception e) {
