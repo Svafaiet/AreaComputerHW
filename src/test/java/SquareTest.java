@@ -19,9 +19,9 @@ public class SquareTest {
     @Test
     public void shouldNotConstructIfSidesNotPositive() {
         List<Integer> sides = Arrays.asList(0, -1, -2);
-        for (int i = 0; i < 3; i++) {
+        for (Integer side : sides) {
             try {
-                new Square(sides.get(i));
+                new Square(side);
             } catch (Exception e) {
                 assertEquals(e.getMessage(), "Sides must be positive");
             }
